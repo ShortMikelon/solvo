@@ -2,7 +2,9 @@ package com.github.shortmikelon.solvoassingment.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Setter;
 
+@Setter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ExchangeRatesExternalApiResponse {
     private long timeLastUpdate;
@@ -16,17 +18,9 @@ public class ExchangeRatesExternalApiResponse {
         return timeLastUpdate;
     }
 
-    public void setTimeLastUpdate(long timeLastUpdate) {
-        this.timeLastUpdate = timeLastUpdate;
-    }
-
     @JsonProperty("base_code")
     public String getBaseCode() {
         return baseCode;
-    }
-
-    public void setBaseCode(String baseCode) {
-        this.baseCode = baseCode;
     }
 
     @JsonProperty("target_code")
@@ -34,17 +28,9 @@ public class ExchangeRatesExternalApiResponse {
         return targetCode;
     }
 
-    public void setTargetCode(String targetCode) {
-        this.targetCode = targetCode;
-    }
-
     @JsonProperty("conversion_rate")
     public double getConversionRate() {
         return conversionRate;
-    }
-
-    public void setConversionRate(double rate) {
-        this.conversionRate = rate;
     }
 
     @JsonProperty("conversion_result")
@@ -52,7 +38,4 @@ public class ExchangeRatesExternalApiResponse {
         return conversionResult;
     }
 
-    public void setConversionResult(double conversionResult) {
-        this.conversionResult = conversionResult;
-    }
 }

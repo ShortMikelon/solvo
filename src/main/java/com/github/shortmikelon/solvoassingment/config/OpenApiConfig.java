@@ -23,7 +23,7 @@ public class OpenApiConfig {
         myContact.setEmail("kenesaset485@gmail.com");
 
         Info information = new Info()
-                .title("Solvo Testing Assertion API")
+                .title("Solvo Testing Assignment API")
                 .version("1.0")
                 .description("This API exposes endpoints to manage transactions and limits.")
                 .contact(myContact);
